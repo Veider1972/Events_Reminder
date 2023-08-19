@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268781683702",
+    "project_id": "events-reminder-fd0dc",
+    "storage_bucket": "events-reminder-fd0dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268781683702:android:6a91b631730aa899523dd7",
+        "android_client_info": {
+          "package_name": "ru.veider.eventsreminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268781683702-h8g16otbhu93ptt5t0qnkdh1d82d69hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr43G6mSJISnlzHK2o_FbXQXgp9Ecw09s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268781683702-h8g16otbhu93ptt5t0qnkdh1d82d69hk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

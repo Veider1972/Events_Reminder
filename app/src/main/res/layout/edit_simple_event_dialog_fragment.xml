@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/edit_events_dialogs_linearlayout">
+
+    <TextView
+        android:id="@+id/titleCreateAnotherEvent"
+        style="@style/edit_events_dialogs_title"
+        android:text="@string/create_simple_event_dialog_title" />
+
+    <EditText
+        android:id="@+id/input_simple_event_name_edit_text"
+        style="@style/edit_event_dialogs_edittext"
+        android:hint="@string/create_simple_event_dialog_edittext_hint" />
+
+    <DatePicker
+        android:id="@+id/input_simple_event_date_picker"
+        android:theme="@style/date_picker"
+        style="@style/edit_event_dialog_date_picker" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <CheckBox
+                android:id="@+id/simpleDialogIsTimePickerEnabled"
+                style="@style/dialog_checkbox_to_enable_time_picker"
+                android:text="@string/checkbox_for_time_picker_text" />
+
+            <TextView
+                android:id="@+id/inputSimpleEventTime"
+                style="@style/input_event_time_textview"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <CheckBox
+                android:id="@+id/isSimpleEventPeriodEnabled"
+                style="@style/dialog_checkbox_to_enable_time_picker"
+                android:text="@string/repeat_once_a" />
+
+            <Spinner
+                android:id="@+id/simpleEventPeriodValueSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout style="@style/edit_events_dialogs_btn_linearlayout">
+
+        <Button
+            android:id="@+id/negative_btn_create_simple_event"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent_btn_background_tint"
+            android:text="@string/dialog_backward_btn_text"
+            android:textSize="@dimen/dialog_btns_textsize" />
+
+        <Button
+            android:id="@+id/positive_btn_create_simple_event"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent_btn_background_tint"
+            android:text="@string/dialog_forward_btn_text"
+            android:textSize="@dimen/dialog_btns_textsize" />
+    </LinearLayout>
+</LinearLayout>

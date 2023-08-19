@@ -1,0 +1,15 @@
+<resources>
+
+    <string-array name="widget_size_entries">
+        <item>4*4</item>
+        <item>4*4</item>
+        <item>4*4</item>
+        <item>4*4</item>
+    </string-array>
+    <string-array name="widget_size_values">
+        <item>44</item>
+        <item>44</item>
+        <item>44</item>
+        <item>44</item>
+    </string-array>
+</resources>

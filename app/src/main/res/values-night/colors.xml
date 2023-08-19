@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appwidget_listview_divider_color">#eeeeee</color>
+    <color name="appwidget_relative_layout_background">#F2EDFA</color>
+    <color name="widget_first_line_default_color">#E8E6EC</color>
+    <color name="widget_second_line_default_color">#DCF3F3</color>
+    <color name="widget_simple_event_default_font_color">#151414</color>
+    <color name="transparent_btn_background_tint">#02EAE8E8</color>
+</resources>

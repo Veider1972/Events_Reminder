@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/event_dialogs_inner_padding">
+
+    <TextView
+        android:id="@+id/titleCreateBirthdayEvent"
+        style="@style/edit_events_dialogs_title"
+        android:text="@string/create_birthday_dialog_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputNameBirthdayEditText"
+        android:hint="@string/create_birthday_dialog_edittext_hint"
+        style="@style/edit_event_dialogs_edittext"
+        android:inputType="textPersonName|textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleCreateBirthdayEvent" />
+
+    <CheckBox
+        android:id="@+id/noYearCheckbox"
+        android:text="@string/birthday_dialog_checkbox_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputNameBirthdayEditText"
+        style="@style/no_birth_year_checkbox" />
+
+    <DatePicker
+        android:id="@+id/inputBirthdayCalendarPicker"
+        android:theme="@style/date_picker"
+        style="@style/edit_event_dialog_date_picker"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noYearCheckbox" />
+
+    <DatePicker
+        android:id="@+id/inputBirthdaySpinnerPicker"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true"
+        android:calendarViewShown="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputBirthdayCalendarPicker" />
+
+    <LinearLayout
+        style="@style/edit_events_dialogs_btn_linearlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputBirthdaySpinnerPicker">
+
+        <Button
+            android:id="@+id/negativeBtnCreateBirthdayEvent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:backgroundTint="@color/transparent_btn_background_tint"
+            android:text="@string/dialog_backward_btn_text"
+            android:textSize="@dimen/dialog_btns_textsize" />
+
+        <Button
+            android:id="@+id/positiveBtnCreateBirthdayEvent"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:backgroundTint="@color/transparent_btn_background_tint"
+            android:text="@string/dialog_forward_btn_text"
+            android:textSize="@dimen/dialog_btns_textsize" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

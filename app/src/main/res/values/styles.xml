@@ -1,0 +1,254 @@
+<resources>
+
+    <style name="Widget.EventsReminder.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.EventsReminder.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="dashboard_and_myevents_recyclerviews_list_of_events">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:contentDescription">@string/dashboard_recyclerview_content_description
+        </item>
+    </style>
+
+    <style name="dashboard_fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/dashboard_fab_add_event_layout_margin</item>
+        <item name="android:backgroundTint">@color/color_primary</item>
+        <item name="android:contentDescription">@string/dashboard_fab_content_description</item>
+    </style>
+
+    <style name="textview_dashboard_interval_of_events">
+        <item name="android:textSize">@dimen/textview_dashboard_interval_of_events_textsize</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dashboard_recyclerview_cardview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/dashboard_recyclerview_cardview_padding</item>
+    </style>
+
+    <style name="dashboard_recyclerview_internal_constraint_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+
+    <style name="dashboard_recyclerview_item_title_textview">
+
+        <item name="android:textSize">@dimen/dashboard_recyclerview_item_title_textview_textsize
+        </item>
+    </style>
+
+    <style name="dashboard_recyclerview_item_event_time_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end</item>
+
+        <item name="android:paddingStart">
+            @dimen/dashboard_recyclerview_item_event_date_textview_padding_start
+        </item>
+        <item name="android:paddingEnd">
+            @dimen/dashboard_recyclerview_item_event_date_textview_padding_end
+        </item>
+        <item name="android:textSize">
+            @dimen/dashboard_recyclerview_item_event_date_textview_textsize
+        </item>
+    </style>
+
+    <style name="dashboard_recyclerview_item_age_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:paddingStart">
+            @dimen/dashboard_recyclerview_item_days_before_event_textview_padding_start
+        </item>
+        <item name="android:paddingEnd">
+            @dimen/dashboard_recyclerview_item_days_before_event_textview_padding_end
+        </item>
+        <item name="android:textSize">
+            @dimen/dashboard_recyclerview_item_days_before_event_textview_textsize
+        </item>
+    </style>
+
+    <style name="widget_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/widget_event_textview_textsize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="widget_event_title_textview" parent="widget_textview"/>
+
+    <style name="widget_event_date_textview" parent="widget_textview">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="widget_event_days_remain_textview" parent="widget_event_title_textview">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="widget_event_time_textview"  parent="widget_textview"/>
+
+    <style name="dashboard_textview">
+
+    </style>
+
+    <style name="textview_dashboard_date_of_events"  parent="dashboard_textview">
+        <item name="android:textSize">@dimen/textview_dashboard_date_or_events_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="edit_events_dialogs_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/create_events_dialog_title_textsize</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="edit_events_dialogs_linearlayout">
+        <item name="android:padding">@dimen/event_dialogs_inner_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="edit_event_dialogs_edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">textPersonName|textCapSentences</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="edit_event_dialog_date_picker" parent="date_picker">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:spinnersShown">false</item>
+        <item name="android:calendarViewShown">true</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="edit_event_dialogs_time_picker">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+
+    <style name="edit_events_dialogs_btn_linearlayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="create_event_radio_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/create_event_dialog_radio_btn_textsize</item>
+        <item name="android:buttonTint">@color/color_primary_dark</item>
+
+    </style>
+
+    <style name="dialog_checkbox_to_enable_time_picker">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/dialog_btns_textsize</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="dashboardAndMyEventsHeader">
+        <item name="android:textColor">@color/light_blue_900</item>
+        <item name="android:textSize">@dimen/textview_dashboard_header_textsize</item>
+    </style>
+
+    <style name="clear_all_local_events_button" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/widget_first_line_default_color</item>
+        <item name="android:textColor">@color/timer_alarm_color</item>
+        <item name="android:elevation">@dimen/my_events_buttons_elevation</item>
+    </style>
+
+    <style name="empty_local_events_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/empty_local_events_textview_margin</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/empty_local_events_textview_text_size</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="my_events_and_dashboard_rv_item_image">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/dashboard_item_image_layout_margin</item>
+    </style>
+
+    <style name="my_events_and_dashboard_list_titles_linear_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/color_primary_dark</item>
+    </style>
+
+    <style name="title_for_inner_preference_category">
+        <item name="android:paddingTop">@dimen/title_for_preference_textview_padding</item>
+        <item name="android:paddingStart">@dimen/title_for_preference_textview_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_for_preference_textview_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+    </style>
+
+    <style name="title_for_preference_category">
+        <item name="android:paddingTop">@dimen/title_for_preference_textview_padding</item>
+        <item name="android:paddingStart">@dimen/title_for_preference_textview_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/title_for_preference_textview_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_secondary</item>
+    </style>
+
+    <style name="no_birth_year_checkbox">
+        <item name="android:checked">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="date_picker" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:colorAccent">@color/pickers_accent</item>
+        <item name="android:colorControlActivated">@color/light_blue_900</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/AppTheme.Alert.Button.Positive</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/AppTheme.Alert.Button.Negative</item>
+     </style>
+    <style name="AppTheme.Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="AppTheme.Alert.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="input_event_time_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/input_event_time_textview_textsize</item>
+        <item name="android:textColor">@color/light_blue_900</item>
+    </style>
+</resources>

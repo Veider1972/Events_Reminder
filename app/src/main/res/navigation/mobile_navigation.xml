@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="ru.veider.eventsreminder.presentation.ui.dashboard.DashboardFragment"
+        android:label="@string/dashboard_fragment_title"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_myEventsFragment"
+            app:destination="@id/myEventsFragment"/>
+        <action
+            android:id="@+id/action_dashboardFragment_to_chooseNewEventTypeDialog"
+            app:destination="@id/chooseNewEventTypeDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.veider.eventsreminder.presentation.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment_title"
+         >
+        <action
+            android:id="@+id/action_settings_self"
+            app:popUpTo="@+id/settingsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myEventsFragment"
+        android:name="ru.veider.eventsreminder.presentation.ui.myevents.MyEventsFragment"
+        android:label="@string/my_events_fragment_title"
+        tools:layout="@layout/fragment_my_events" >
+        <action
+            android:id="@+id/action_myEvents_to_editSimpleEventDialog"
+            app:destination="@id/editSimpleEventDialog"
+
+            />
+        <action
+            android:id="@+id/action_myEventsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/chooseNewEventTypeDialog"
+        android:name="ru.veider.eventsreminder.presentation.ui.dialogs.CreateNewEventDialogFragment"
+        tools:layout="@layout/create_new_event_dialog_fragment" >
+
+        <action
+            android:id="@+id/action_chooseNewEventTypeDialog_to_editHolidayDialog"
+            app:destination="@id/editHolidayDialog" />
+
+        <action
+            android:id="@+id/action_chooseNewEventTypeDialog_to_editSimpleEventDialog"
+            app:destination="@id/editSimpleEventDialog" />
+        <action
+            android:id="@+id/action_chooseNewEventTypeDialog_to_editBirthdayDialog"
+            app:destination="@id/editBirthdayDialog" />
+    </dialog>
+    <dialog
+        android:id="@+id/editBirthdayDialog"
+        android:name="ru.veider.eventsreminder.presentation.ui.dialogs.EditBirthdayEventDialogFragment"
+        tools:layout="@layout/edit_birthday_event_dialog_fragment" >
+
+        <action
+            android:id="@+id/action_editBirthdayDialog_to_myEvents"
+            app:destination="@id/myEventsFragment"
+            app:popUpTo="@+id/myEventsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editBirthdayDialog_to_homeToDashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@+id/dashboardFragment"
+            app:popUpToInclusive="true"
+            />
+
+    </dialog>
+    <dialog
+        android:id="@+id/editHolidayDialog"
+        android:name="ru.veider.eventsreminder.presentation.ui.dialogs.EditHolidayEventDialogFragment"
+        tools:layout="@layout/edit_holiday_event_dialog_fragment">
+        <action
+            android:id="@+id/action_editHolidayDialog_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@+id/dashboardFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editHolidayDialog_to_myEventsFragment"
+            app:destination="@id/myEventsFragment"
+            app:popUpTo="@+id/myEventsFragment"
+            app:popUpToInclusive="true"/>
+
+    </dialog>
+    <dialog
+        android:id="@+id/editSimpleEventDialog"
+        android:name="ru.veider.eventsreminder.presentation.ui.dialogs.EditSimpleEventDialogFragment"
+        tools:layout="@layout/edit_simple_event_dialog_fragment">
+        <action
+            android:id="@+id/action_editSimpleEventDialog_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@+id/dashboardFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_editSimpleEventDialog_to_myEvents"
+            app:destination="@id/myEventsFragment"
+            app:popUpTo="@+id/myEventsFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+</navigation>

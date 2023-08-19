@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/title"
+        style="@style/my_events_and_dashboard_list_titles_linear_layout"
+        android:paddingHorizontal="@dimen/global_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/eventDaysTo"
+            style="@style/textview_dashboard_interval_of_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textview_dashboard_interval_of_events_layout_margin_start"
+            android:layout_weight="0.3"
+            android:textAlignment="viewStart"
+            tools:text="+17 дн." />
+
+        <TextView
+            android:id="@+id/eventDate"
+            style="@style/textview_dashboard_date_of_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:textAlignment="viewStart"
+            tools:text="22.05.2023, четверг" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/global_padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            style="@style/my_events_and_dashboard_rv_item_image"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            tools:src="@drawable/birthday_balloons" />
+
+        <TextView
+            android:id="@+id/eventTitle"
+            style="@style/dashboard_recyclerview_item_title_textview"
+            android:layout_marginHorizontal="@dimen/global_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textAlignment="viewStart"
+            android:layout_weight="1.2"
+            tools:text="name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eventAge"
+                style="@style/dashboard_recyclerview_item_age_textview"
+                android:maxLines="1"
+                android:visibility="gone"
+                tools:visibility = "visible"
+                tools:text="100 let" />
+
+            <TextView
+                android:id="@+id/eventTime"
+                style="@style/dashboard_recyclerview_item_event_time_textview"
+                android:visibility="gone"
+                tools:visibility = "visible"
+                tools:text="10:10" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.myevents.MyEventsFragment">
+
+    <TextView
+        android:id="@+id/textViewMyEventsHeader"
+        style="@style/dashboardAndMyEventsHeader"
+        android:layout_marginHorizontal="@dimen/global_padding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@id/clearAllLocalEventsBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clearAllLocalEventsBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/my_events_are_empty_textview_text"
+        android:text="@string/empty_local_events_textview_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/empty_local_events_textview" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearAllLocalEventsBtn"
+        android:text="@string/clear_local_events_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/clear_all_local_events_button" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clearAllLocalEventsBtn">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvListOfMyEvents"
+            style="@style/dashboard_and_myevents_recyclerviews_list_of_events"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/rv_list_of_my_events_padding_bottom"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/my_events_recyclerview_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/myEventsFabAddEvent"
+        style="@style/dashboard_fab"
+        android:src="@drawable/ic_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

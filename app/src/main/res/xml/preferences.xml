@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/title_for_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/title_datasource_preference_category">
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_phonebook_datasource_checkbox_preference"
+            app:title="@string/title_phonebook_datasource_checkbox_preference"
+            app:useSimpleSummaryProvider="true" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_calendar_datasource_checkbox_preference"
+            app:title="@string/title_calendar_datasource_checkbox_preference"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <SeekBarPreference
+        android:max="365"
+        app:iconSpaceReserved="false"
+        app:key="@string/key_show_events_interval_preference"
+        app:min="1"
+        app:showSeekBarValue="true"
+        app:summary="@string/summary_show_event_interval_preference"
+        app:title="@string/title_show_event_interval_preference"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory
+        android:layout="@layout/title_for_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/title_notification_settings_preference_category">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_notification_start_time_preference"
+            app:title="@string/title_notification_start_time_preference"
+            app:useSimpleSummaryProvider="true" />
+        <SeekBarPreference
+            android:max="60"
+            app:iconSpaceReserved="false"
+            app:key="@string/key_minutes_before_notification_preference"
+            app:min="0"
+            app:showSeekBarValue="true"
+            app:summary="@string/summary_minutes_before_notification_preference"
+            app:title="@string/title_minutes_before_notification_preference"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/title_for_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/title_widget_data_settings_preference_category">
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_event_date_checkbox_preference"
+            app:title="@string/title_event_date_checkbox_preference"
+            app:useSimpleSummaryProvider="true" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_event_time_checkbox_preference"
+            app:title="@string/title_event_time_checkbox_preference"
+            app:useSimpleSummaryProvider="true" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_age_checkbox_preference"
+            app:title="@string/title_age_checkbox_preference"
+            app:useSimpleSummaryProvider="true" />
+        <SeekBarPreference
+            android:max="90"
+            app:iconSpaceReserved="false"
+            app:key="@string/key_widget_interval_of_events_preference"
+            app:min="1"
+            app:showSeekBarValue="true"
+            app:summary="@string/summary_widget_interval_of_events_preference"
+            app:title="@string/title_widget_interval_of_events_preference"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/title_for_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/widget_appearance_settings_preference_category">
+        <ru.veider.eventsreminder.presentation.ui.settings.WidgetPreviewPreference
+            android:key="widget_appearance_by_default"
+            android:layout="@layout/widget_preview" />
+        <PreferenceCategory
+            android:layout="@layout/title_for_inner_preference_category"
+            app:iconSpaceReserved="false"
+            app:title="@string/font_preference_category_title">
+            <ru.veider.eventsreminder.presentation.ui.FontSizeSeekBarPreference
+                android:max="60"
+                app:iconSpaceReserved="false"
+                app:key="@string/key_widget_font_size_preference"
+                app:min="6"
+                app:seekBarIncrement="1"
+                app:showSeekBarValue="true"
+                app:title="@string/title_widget_font_size_preference" />
+
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#01579B"
+                android:key="@string/key_widget_birthday_font_color_preference"
+                android:title="@string/title_widget_birthday_font_color_preference"
+                app:iconSpaceReserved="false" />
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#3700B3"
+                android:key="@string/key_widget_holiday_font_color_preference"
+                android:title="@string/title_widget_holiday_font_color_preference"
+                app:iconSpaceReserved="false" />
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#151414"
+                android:key="@string/key_widget_simple_event_font_color_preference"
+                android:title="@string/title_widget_simple_event_font_color_preference"
+                app:iconSpaceReserved="false" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:layout="@layout/title_for_inner_preference_category"
+            app:iconSpaceReserved="false"
+            app:title="@string/background_preference_category_title">
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#000000"
+                android:key="@string/key_background_color_preference"
+                android:title="@string/title_background_color_preference"
+                app:iconSpaceReserved="false" />
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#E8E6EC"
+                android:key="@string/key_first_line_color_preference"
+                android:title="@string/title_first_line_color_preference"
+                app:iconSpaceReserved="false" />
+
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#DCF3F3"
+                android:key="@string/key_second_line_color_preference"
+                app:iconSpaceReserved="false"
+                app:title="@string/title_second_line_color_preference" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:layout="@layout/title_for_inner_preference_category"
+            android:title="@string/widget_border">
+            <com.rarepebble.colorpicker.ColorPreference
+                android:defaultValue="#8BC34A"
+                app:iconSpaceReserved="false"
+                android:key="@string/key_widget_border_color"
+                app:title="@string/widget_border_color"
+                />
+            <SeekBarPreference
+                android:max="6"
+                app:iconSpaceReserved="false"
+                app:key="@string/key_widget_border_width"
+                app:min="0"
+                app:seekBarIncrement="1"
+                app:showSeekBarValue="true"
+                app:title="@string/widget_border_width" />
+            <SeekBarPreference
+                app:key="@string/key_widget_border_corners"
+                app:iconSpaceReserved="false"
+                app:seekBarIncrement="1"
+                app:showSeekBarValue="true"
+                android:max="32"
+                app:min="0"
+                app:title="@string/widget_border_corners" />
+        </PreferenceCategory>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/title_for_inner_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/export_import_settings_preference_category_title">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_export_settings_preference"
+            app:title="@string/title_export_settings_preference" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_import_settings_preference"
+            app:title="@string/title_import_settings_preference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/title_for_inner_preference_category"
+        app:iconSpaceReserved="false"
+        app:title="@string/export_import_events_category_title">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_events_export"
+            app:title="@string/events_export" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/key_events_import"
+            app:title="@string/events_import" />
+    </PreferenceCategory>
+</PreferenceScreen>

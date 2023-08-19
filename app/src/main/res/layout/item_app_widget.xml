@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemAppWidget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/daysToEvent"
+        android:maxLines="1"
+        android:layout_weight = "0"
+        tools:text="3 дн."
+        style="@style/widget_event_days_remain_textview"
+        android:layout_marginEnd="@dimen/widget_textview_margin"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/eventDate"
+        android:maxLines="1"
+        android:layout_weight = "0"
+        android:layout_marginEnd="@dimen/widget_textview_margin"
+        tools:text="(15.07)"
+        style="@style/widget_event_date_textview" />
+    <TextView
+        android:id="@+id/eventTime"
+        android:maxLines="1"
+        android:layout_weight = "0"
+        android:layout_marginEnd="@dimen/widget_textview_margin"
+        tools:text="12:00"
+        style="@style/widget_event_time_textview" />
+    <TextView
+        android:id="@+id/eventTitle"
+        android:maxLines="1"
+        android:layout_weight = "1"
+        android:ellipsize="end"
+        tools:text="Заголовок"
+        style="@style/widget_event_title_textview" />
+    <TextView
+        android:id="@+id/eventAge"
+        android:maxLines="1"
+        android:layout_weight = "0"
+        android:layout_marginStart="@dimen/widget_textview_margin"
+        tools:text="Возраст"
+        style="@style/widget_event_time_textview" />
+</LinearLayout>
